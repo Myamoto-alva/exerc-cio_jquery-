@@ -1,0 +1,126 @@
+/* Estilo global */
+* { 
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+    font-family: 'Poppins', sans-serif; /* Define a fonte padrão */
+    box-sizing: border-box; /* Inclui padding e border no cálculo das dimensões */
+}
+
+/* Estilo do contêiner principal */
+.container {
+    width: 100%; /* Define largura completa */
+    min-height: 100vh; /* Define altura mínima para ocupar a tela inteira */
+    background: linear-gradient(135deg, #153677, #4e085f); /* Fundo com gradiente */
+    padding: 10px; /* Padding ao redor do contêiner */
+}
+
+/* Estilo do aplicativo de tarefas */
+.todo-app {
+    width: 100%; /* Largura completa */
+    max-width: 540px; /* Largura máxima */
+    background: #fff; /* Fundo branco */
+    margin: 100px auto 20px; /* Margem: 100px superior, auto lateral, 20px inferior */
+    padding: 40px 30px 70px; /* Padding interno */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+/* Estilo do título */
+.todo-app h2 {
+    color: #003765; /* Cor do texto */
+    display: flex; /* Usado para alinhar o ícone */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* Estilo do ícone no título */
+.todo-app h2 img {
+    width: 30px; /* Largura do ícone */
+    margin-left: 10px; /* Espaço à esquerda */
+}
+
+/* Estilo da linha de entrada */
+.row {
+    display: flex; /* Alinha os elementos em linha */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaço entre os elementos */
+    background: #edeef0; /* Fundo cinza claro */
+    border-radius: 30px; /* Cantos arredondados */
+    padding-left: 20px; /* Padding à esquerda */
+    margin-bottom: 25px; /* Espaço inferior */
+}
+
+/* Estilo do campo de entrada */
+input {
+    flex: 1; /* Ocupa o espaço disponível */
+    border: none; /* Sem borda */
+    outline: none; /* Sem outline ao focar */
+    background: transparent; /* Fundo transparente */
+    padding: 10px; /* Padding interno */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilo do botão */
+button {
+    border: none; /* Sem borda */
+    outline: none; /* Sem outline ao focar */
+    padding: 16px 50px; /* Padding interno */
+    background: #ff5945; /* Fundo vermelho */
+    color: #fff; /* Cor do texto branca */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    border-radius: 40px; /* Cantos arredondados */
+}
+
+/* Estilo dos itens da lista */
+ul li {
+    list-style: none; /* Sem marcadores */
+    font-size: 17px; /* Tamanho da fonte */
+    padding: 12px 8px 12px 50px; /* Padding interno */
+    user-select: none; /* Desabilita seleção de texto */
+    cursor: pointer; /* Cursor de ponteiro */
+    position: relative; /* Para posicionamento absoluto do pseudo-elemento */
+}
+
+/* Estilo do ícone não checado */
+ul li::before {
+    content: ''; /* Conteúdo vazio */
+    position: absolute; /* Posição absoluta */
+    height: 28px; /* Altura do ícone */
+    width: 28px; /* Largura do ícone */
+    border-radius: 50%; /* Ícone circular */
+    background-image: url(images/unchecked.png); /* Imagem do ícone não checado */
+    background-size: cover; /* Cobertura total do espaço */
+    background-position: center; /* Centraliza a imagem */
+    top: 8px; /* Posição superior */
+    left: 8px; /* Posição à esquerda */
+}
+
+/* Estilo dos itens checados */
+ul li.checked {
+    color: #555; /* Cor do texto */
+    text-decoration: line-through; /* Texto riscado */
+}
+
+/* Estilo do ícone checado */
+ul li.checked::before {
+    background-image: url(images/checked.png); /* Imagem do ícone checado */
+}
+
+/* Estilo do botão de exclusão */
+ul li span {
+    position: absolute; /* Posição absoluta */
+    right: 0; /* Alinhado à direita */
+    top: 5px; /* Posição superior */
+    width: 40px; /* Largura */
+    height: 40px; /* Altura */
+    font-size: 22px; /* Tamanho da fonte */
+    color: #555; /* Cor do texto */
+    line-height: 40px; /* Alinhamento vertical do texto */
+    text-align: center; /* Alinhamento central do texto */
+    border-radius: 50%; /* Botão circular */
+}
+
+/* Estilo do botão de exclusão ao passar o mouse */
+ul li span:hover {
+    background: #edeef0; /* Fundo cinza claro */
+}
